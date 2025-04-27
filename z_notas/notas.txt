@@ -1,0 +1,4 @@
+Cambiar el grafico de usuarios activos, proyectos etc, por numeros que vayan contandose cargandose desde el 0 hasta un valor
+
+
+Recuperacion de contraseña
