@@ -16,6 +16,11 @@
     color: white;
   }
 
+  .navbar {
+    border-bottom: 1px solid #14192c; /* un gris clarito */
+  }
+  
+
   .navbar a {
     color: white;
     font-size: large;
@@ -60,10 +65,6 @@
 
   .nav-item .dropdown-item {
     color: white;
-  }
-
-  .dropdown-menu {
-    color: red;
   }
 
   .navbar-nav .nav-link.show {

@@ -36,8 +36,10 @@ CREATE TABLE proyectos (
     fecha_inicio DATE,
     fecha_fin DATE,
     id_equipo INT,
-    FOREIGN KEY (id_equipo) REFERENCES equipos(id) ON DELETE SET NULL
+    icono VARCHAR(255) DEFAULT NULL
+    -- FOREIGN KEY (id_equipo) REFERENCES equipos(id) ON DELETE SET NULL
 );
+
 
 -- Relación usuarios-proyectos con rol dentro del proyecto
 CREATE TABLE usuarios_proyectos (
@@ -49,20 +51,38 @@ CREATE TABLE usuarios_proyectos (
     FOREIGN KEY (id_proyecto) REFERENCES proyectos(id) ON DELETE CASCADE
 );
 
--- Tabla de tareas
-CREATE TABLE tareas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(150) NOT NULL,
-    descripcion TEXT,
-    estado ENUM('pendiente', 'en_progreso', 'completada') DEFAULT 'pendiente',
-    prioridad ENUM('baja', 'media', 'alta') DEFAULT 'media',
-    fecha_limite DATE,
-    id_proyecto INT NOT NULL,
-    id_responsable INT,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_proyecto) REFERENCES proyectos(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_responsable) REFERENCES usuarios(id) ON DELETE SET NULL
+CREATE TABLE listas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  orden INT NOT NULL DEFAULT 0,
+  proyecto_id INT NOT NULL,
+  FOREIGN KEY (proyecto_id) REFERENCES proyectos(id) ON DELETE CASCADE
 );
+
+CREATE TABLE tareas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(150) NOT NULL,
+  lista_id INT NOT NULL,
+  orden INT NOT NULL DEFAULT 0,
+  FOREIGN KEY (lista_id) REFERENCES listas(id) ON DELETE CASCADE
+);
+
+-- Tabla de tareas
+-- CREATE TABLE tareas (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     titulo VARCHAR(150) NOT NULL,
+--     descripcion TEXT,
+--     estado ENUM('pendiente', 'en_progreso', 'completada') DEFAULT 'pendiente',
+--     prioridad ENUM('baja', 'media', 'alta') DEFAULT 'media',
+--     fecha_limite DATE,
+--     id_proyecto INT NOT NULL,
+--     id_responsable INT,
+--     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     FOREIGN KEY (id_proyecto) REFERENCES proyectos(id) ON DELETE CASCADE,
+--     FOREIGN KEY (id_responsable) REFERENCES usuarios(id) ON DELETE SET NULL
+-- );
+
+
 
 -- Tabla de mensajes (chat interno por proyecto)
 CREATE TABLE mensajes (

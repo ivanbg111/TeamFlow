@@ -1,0 +1,30 @@
+/* css/tareas.css */
+.list {
+  background: #272c42;
+  width: 250px;
+  padding: .5rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.list-header h5 {
+  margin: 0 0 .5rem;
+  outline: none;
+}
+.list-tasks {
+  flex-grow: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .5rem;
+}
+.task {
+  background: rgba(255,255,255,0.1);
+  margin-bottom: .5rem;
+  padding: .5rem;
+  border-radius: 4px;
+}
+.add-card, #add-list {
+  width: 100%;
+  text-align: left;
+}
+.new-list { display: flex; align-items: start; }

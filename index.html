@@ -10,49 +10,48 @@
   <!-- Enlace a Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Estilos CSS personalizados -->
-   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" aria-current="page" href="#">(LOGO)</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        ¿Qué es TeamFlow?
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Descripción General</a></li>
-                        <li><a class="dropdown-item" href="#">Características Principales</a></li>
-                        <li><a class="dropdown-item" href="#">Beneficios de Usar TeamFlow</a></li>
-                        <li><a class="dropdown-item" href="#">Testimonios de Usuarios</a></li>
-                        <li><a class="dropdown-item" href="#">Preguntas Frecuentes</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Precio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link boton-iniciarSesion" href="#">Iniciar Sesión</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link boton-registrarse" href="autenticacion/register.html">Registrarse</a>
-                </li>
+      <a class="navbar-brand" aria-current="page" href="#">(LOGO)</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ¿Qué es TeamFlow?
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Descripción General</a></li>
+              <li><a class="dropdown-item" href="#">Características Principales</a></li>
+              <li><a class="dropdown-item" href="#">Beneficios de Usar TeamFlow</a></li>
+              <li><a class="dropdown-item" href="#">Testimonios de Usuarios</a></li>
+              <li><a class="dropdown-item" href="#">Preguntas Frecuentes</a></li>
             </ul>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Precio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link boton-iniciarSesion" href="autenticacion/login.html">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link boton-registrarse" href="autenticacion/register.html">Registrarse</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
   <!-- Hero Section Rediseñado -->
   <section class="hero-section">
@@ -76,7 +75,8 @@
             </div>
           </div>
           <h4 class="mb-3">Dashboard Colaborativo</h4>
-          <p class="opacity-75">Visualiza el progreso y contribución de todos los miembros de tu equipo en tiempo real.</p>
+          <p class="opacity-75">Visualiza el progreso y contribución de todos los miembros de tu equipo en tiempo real.
+          </p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
@@ -87,7 +87,8 @@
             </div>
           </div>
           <h4 class="mb-3">Gestión de Tareas</h4>
-          <p class="opacity-75">Asigna y organiza tareas de manera eficiente con un sistema intuitivo de arrastrar y soltar.</p>
+          <p class="opacity-75">Asigna y organiza tareas de manera eficiente con un sistema intuitivo de arrastrar y
+            soltar.</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
@@ -98,7 +99,8 @@
             </div>
           </div>
           <h4 class="mb-3">Comunicación en Tiempo Real</h4>
-          <p class="opacity-75">Mantén a tu equipo sincronizado con un chat interno por proyecto, ideal para equipos distribuidos.</p>
+          <p class="opacity-75">Mantén a tu equipo sincronizado con un chat interno por proyecto, ideal para equipos
+            distribuidos.</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
@@ -109,26 +111,27 @@
             </div>
           </div>
           <h4 class="mb-3">Análisis de Productividad</h4>
-          <p class="opacity-75">Mide el rendimiento de tu equipo con gráficos visuales que muestran tareas completadas y progreso global.</p>
+          <p class="opacity-75">Mide el rendimiento de tu equipo con gráficos visuales que muestran tareas completadas y
+            progreso global.</p>
         </div>
       </div>
     </div>
   </section>
-  
+
 
   <!-- Gráfico de Rendimiento -->
   <section class="chart-container">
     <h2 class="text-center">Rendimiento del Equipo</h2>
     <canvas id="performanceChart"></canvas>
   </section>
-  
+
 
   <!-- Footer -->
   <footer class="footer py-4 mt-5" style="background: linear-gradient(to bottom, #272c42 0%, #1b2138 100%);">
     <div class="container text-center">
       <p>&copy; 2024 <span class="gradient-text">TeamFlow</span>. Todos los derechos reservados.</p>
       <p>
-        <a href="#" class="text-white opacity-75 hover-opacity-100 mx-2">Términos y condiciones</a> | 
+        <a href="#" class="text-white opacity-75 hover-opacity-100 mx-2">Términos y condiciones</a> |
         <a href="#" class="text-white opacity-75 hover-opacity-100 mx-2">Política de privacidad</a>
       </p>
     </div>
@@ -137,7 +140,7 @@
   <!-- Enlace a Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script para Chart.js y Contadores -->
+  <!-- Script para Chart.js y Contadores -->
   <!-- Script para Chart.js -->
   <script>
     const ctx = document.getElementById('performanceChart').getContext('2d');
